@@ -26,7 +26,7 @@ def dataset(data_type):
     print(labels.shape, std_features.shape)
     train_idx = np.load('Data/train_idx.npy')
     test_idx = np.load('Data/test_idx.npy')
-    train_f, test_f, train_label, test_label = std_features[train_idx:], std_features[test_idx:], \
+    train_f, test_f, train_label, test_label = std_features[train_idx, :], std_features[test_idx, :], \
                                                labels[train_idx], labels[test_idx]
     return train_f, test_f, train_label, test_label
 
