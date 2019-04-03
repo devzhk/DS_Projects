@@ -1,0 +1,2 @@
+- train_idx.npy: indices of the training data
+- test_idx.npy: indices of the testing data
