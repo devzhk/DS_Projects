@@ -6,3 +6,4 @@
 4. The project report should contain experimental setting (i.e., dataset, feature, training/testing split), the dimensionality reduction methods you tried, the experimental results you obtained, and the experimental observations based on your experimental results.
 ## 2. K-Nearest Neighbors (KNN) Classification with Different Distance Metrics
 ## 3. Feature Encoding for Image Classification
+## 4. Domain Adaptation
