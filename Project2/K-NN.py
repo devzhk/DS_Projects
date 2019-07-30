@@ -16,7 +16,7 @@ type_list = ['raw', 'PCA', 'tsne', 'VAE-16', 'VAE-32', 'VAE-64', 'VAE-128', 'VAE
 data_type = type_list[0]  # raw, PCA, tsne，VAE-128
 pca_path = 'Data/pca.npy'
 tsne_path = 'Data/tsne3.npy'
-cvresults_path = 'Results/%s-1-cv_' % data_type
+cvresults_path = 'Results/eu%s-17-cv_' % data_type
 
 
 def fn_timer(function):
@@ -27,6 +27,7 @@ def fn_timer(function):
         t1 = time.time()
         print('Total running time: %s minutes' % str((t1 - t0) / 60))
         return results
+
     return function_timer
 
 
@@ -41,7 +42,7 @@ if __name__ == '__main__':
     # preview(train_labels, test_labels)
     knn = KNeighborsClassifier()
     p = np.array([2])
-    k_range = np.arange(1, 2)
+    k_range = np.array([1, 7])
     param_grid = [{'p': p, 'n_neighbors': k_range}]
     grid = GridSearchCV(knn, param_grid, cv=5, n_jobs=-1)
     t0 = time.time()
